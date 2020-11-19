@@ -8,17 +8,10 @@ from email.message import EmailMessage
 EMAIL_ADDRESS = os.environ.get("TEST_EMAIL")
 EMAIL_PASSWORD = os.environ.get("TEST_PASS")
 
-# Create email
-msg = EmailMessage()
-msg["Subject"] = "Test Drive this weekend"
-msg["From"] = EMAIL_ADDRESS
-msg.set_content("Hello, The car is ready for a test drive whenever you are.")
-
 # Pandas
 
 df = pd.read_csv("dwc.csv")
 emails = df["Email"]
-
 email_list = list(emails)
 print(email_list)
 
